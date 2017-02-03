@@ -5,7 +5,7 @@ if [ "$#" -ne 4 ]; then
     exit 1
 fi
 
-bash cycle_through_dates.sh $3 $4 | while read -r; do 
+while read -r; do 
 
 echo "Copying ${1}${REPLY} into ${2}${REPLY}"; 
 bq cp -f ${1}${REPLY} ${2}${REPLY}
